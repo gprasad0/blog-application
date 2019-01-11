@@ -1,0 +1,5 @@
+<h1><%= @post.title %></h1>
+<p><%=time_ago_in_words @post.created_at%> ago</p>
+<p><%= @post.body %></p>
+<p>CATEGORY :  <%= link_to @post.category.name,category_path(:id => @post.category.id) %></p>
+<p><%= link_to "post",posts_path %></p>

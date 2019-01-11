@@ -1,0 +1,10 @@
+
+<h1><%= @title %></h1>
+<%   @posts.each do |post| %>
+    <h3><%= link_to post.title,post%></h3>
+    <p><%= post.body %></p>
+    <%end.empty? %>
+    <p> Sorry, there are no posts in this category </p>
+<% end %>
+
+<%= link_to "GO BACK", categories_path%>
